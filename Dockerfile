@@ -1,6 +1,7 @@
-FROM       ubuntu:13.10
+FROM       ubuntu:14.04
 MAINTAINER Nate Jones <nate@endot.org>
 
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 6B73A36E6026DFCA
 RUN echo "deb http://www.rabbitmq.com/debian/ testing main" > /etc/apt/sources.list.d/rabbitmq.list
 RUN apt-get update
 RUN apt-get install wget -y
